@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
-    <link>https://example.org/posts/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <title>Posts on My Hugo Blog</title>
+    <link>https://wei666-boop.github.io/posts/</link>
+    <description>Recent content in Posts on My Hugo Blog</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Tue, 13 Jan 2026 22:57:32 +0800</lastBuildDate>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wei666-boop.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>你好hugo</title>
-      <link>https://example.org/posts/%E4%BD%A0%E5%A5%BDhugo/</link>
+      <link>https://wei666-boop.github.io/posts/%E4%BD%A0%E5%A5%BDhugo/</link>
       <pubDate>Tue, 13 Jan 2026 22:57:32 +0800</pubDate>
-      <guid>https://example.org/posts/%E4%BD%A0%E5%A5%BDhugo/</guid>
+      <guid>https://wei666-boop.github.io/posts/%E4%BD%A0%E5%A5%BDhugo/</guid>
       <description></description>
     </item>
   </channel>
