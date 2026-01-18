@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>一个bug | tlw的博客</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="今天在写我的项目的时候（这个项目是一个下载bilibili视频的网站），我发现我点进下载中心的页面时，原本应该展示出的历史下载记录此时却空无一物，于是我立马点击了F12键，发现控制台报了两个错误，如下:
+
+于是我就开始搜索这两个报错是什么意思
+整个报错最核心的一句就是:SyntaxError: Unexpected end of JSON input，这表明json还没有读完就结束了，更具体一点的话，这个报错应该发生在这里Failed to execute &lsquo;json&rsquo; on &lsquo;Response&rsquo;，这说明我们此时应该是在执行这样一段代码:
+fetch(url)
+  .then(res=&gt;res.json())
+此时HTTP请求返回的body并不是一个合法的json，于是就出现了上述情况。
+这里可能会有不了解的朋友会对这个函数产生误解，以为这个函数是将res转换为json格式，但其实不是这样的，这个函数的真实意图是:
+我相信你给我的是json，请把它转换为javascript对象
+所以说一旦你给它的不是json格式，那它就会报错
+一旦出现这种情况，我们可以从以下几个方向排查:
+
+后端返回了空
+后端返回了一段不是json格式的东西
+后端确实返回了json，可是在返回的途中可能因为某种原因导致这个json被破坏了
+
+当我们排查的时候，可以这么排查，将代码改为:
+fetch(url)
+  .then(res=&gt;res.text())
+  .then(text=&gt;console.log(text))
+这样我们就能看到返回的到底是个什么东西，知道了返回的是个啥，之后排查的时候也就有了方向">
+    <meta name="generator" content="Hugo 0.154.5">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.efe4d852f731d5d1fbb87718387202a97aafd768cdcdaed0662bbe6982e91824.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://wei666-boop.github.io/posts/%E4%B8%80%E4%B8%AAbug/">
+    
+
+    
+    
+    <meta property="og:url" content="https://wei666-boop.github.io/posts/%E4%B8%80%E4%B8%AAbug/">
+  <meta property="og:site_name" content="tlw的博客">
+  <meta property="og:title" content="一个bug">
+  <meta property="og:description" content="今天在写我的项目的时候（这个项目是一个下载bilibili视频的网站），我发现我点进下载中心的页面时，原本应该展示出的历史下载记录此时却空无一物，于是我立马点击了F12键，发现控制台报了两个错误，如下: 于是我就开始搜索这两个报错是什么意思
+整个报错最核心的一句就是:SyntaxError: Unexpected end of JSON input，这表明json还没有读完就结束了，更具体一点的话，这个报错应该发生在这里Failed to execute ‘json’ on ‘Response’，这说明我们此时应该是在执行这样一段代码:
+fetch(url) .then(res=&gt;res.json()) 此时HTTP请求返回的body并不是一个合法的json，于是就出现了上述情况。
+这里可能会有不了解的朋友会对这个函数产生误解，以为这个函数是将res转换为json格式，但其实不是这样的，这个函数的真实意图是: 我相信你给我的是json，请把它转换为javascript对象
+所以说一旦你给它的不是json格式，那它就会报错
+一旦出现这种情况，我们可以从以下几个方向排查:
+后端返回了空 后端返回了一段不是json格式的东西 后端确实返回了json，可是在返回的途中可能因为某种原因导致这个json被破坏了 当我们排查的时候，可以这么排查，将代码改为:
+fetch(url) .then(res=&gt;res.text()) .then(text=&gt;console.log(text)) 这样我们就能看到返回的到底是个什么东西，知道了返回的是个啥，之后排查的时候也就有了方向">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-18T21:55:20+08:00">
+    <meta property="article:modified_time" content="2026-01-18T21:55:20+08:00">
+
+  <meta itemprop="name" content="一个bug">
+  <meta itemprop="description" content="今天在写我的项目的时候（这个项目是一个下载bilibili视频的网站），我发现我点进下载中心的页面时，原本应该展示出的历史下载记录此时却空无一物，于是我立马点击了F12键，发现控制台报了两个错误，如下: 于是我就开始搜索这两个报错是什么意思
+整个报错最核心的一句就是:SyntaxError: Unexpected end of JSON input，这表明json还没有读完就结束了，更具体一点的话，这个报错应该发生在这里Failed to execute ‘json’ on ‘Response’，这说明我们此时应该是在执行这样一段代码:
+fetch(url) .then(res=&gt;res.json()) 此时HTTP请求返回的body并不是一个合法的json，于是就出现了上述情况。
+这里可能会有不了解的朋友会对这个函数产生误解，以为这个函数是将res转换为json格式，但其实不是这样的，这个函数的真实意图是: 我相信你给我的是json，请把它转换为javascript对象
+所以说一旦你给它的不是json格式，那它就会报错
+一旦出现这种情况，我们可以从以下几个方向排查:
+后端返回了空 后端返回了一段不是json格式的东西 后端确实返回了json，可是在返回的途中可能因为某种原因导致这个json被破坏了 当我们排查的时候，可以这么排查，将代码改为:
+fetch(url) .then(res=&gt;res.text()) .then(text=&gt;console.log(text)) 这样我们就能看到返回的到底是个什么东西，知道了返回的是个啥，之后排查的时候也就有了方向">
+  <meta itemprop="datePublished" content="2026-01-18T21:55:20+08:00">
+  <meta itemprop="dateModified" content="2026-01-18T21:55:20+08:00">
+  <meta itemprop="wordCount" content="28">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="一个bug">
+  <meta name="twitter:description" content="今天在写我的项目的时候（这个项目是一个下载bilibili视频的网站），我发现我点进下载中心的页面时，原本应该展示出的历史下载记录此时却空无一物，于是我立马点击了F12键，发现控制台报了两个错误，如下: 于是我就开始搜索这两个报错是什么意思
+整个报错最核心的一句就是:SyntaxError: Unexpected end of JSON input，这表明json还没有读完就结束了，更具体一点的话，这个报错应该发生在这里Failed to execute ‘json’ on ‘Response’，这说明我们此时应该是在执行这样一段代码:
+fetch(url) .then(res=&gt;res.json()) 此时HTTP请求返回的body并不是一个合法的json，于是就出现了上述情况。
+这里可能会有不了解的朋友会对这个函数产生误解，以为这个函数是将res转换为json格式，但其实不是这样的，这个函数的真实意图是: 我相信你给我的是json，请把它转换为javascript对象
+所以说一旦你给它的不是json格式，那它就会报错
+一旦出现这种情况，我们可以从以下几个方向排查:
+后端返回了空 后端返回了一段不是json格式的东西 后端确实返回了json，可是在返回的途中可能因为某种原因导致这个json被破坏了 当我们排查的时候，可以这么排查，将代码改为:
+fetch(url) .then(res=&gt;res.text()) .then(text=&gt;console.log(text)) 这样我们就能看到返回的到底是个什么东西，知道了返回的是个啥，之后排查的时候也就有了方向">
+
+      
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        tlw的博客
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">一个bug</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-01-18T21:55:20+08:00">January 18, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><p>今天在写我的项目的时候（这个项目是一个下载bilibili视频的网站），我发现我点进下载中心的页面时，原本应该展示出的历史下载记录此时却空无一物，于是我立马点击了F12键，发现控制台报了两个错误，如下:
+<img src="/images/1.png" alt="图片显示出错"></p>
+<p>于是我就开始搜索这两个报错是什么意思</p>
+<p>整个报错最核心的一句就是:SyntaxError: Unexpected end of JSON input，这表明json还没有读完就结束了，更具体一点的话，这个报错应该发生在这里Failed to execute &lsquo;json&rsquo; on &lsquo;Response&rsquo;，这说明我们此时应该是在执行这样一段代码:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span>=&gt;<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>())
+</span></span></code></pre></div><p>此时HTTP请求返回的body并不是一个合法的json，于是就出现了上述情况。</p>
+<p>这里可能会有不了解的朋友会对这个函数产生误解，以为这个函数是将res转换为json格式，但其实不是这样的，这个函数的真实意图是:
+<strong>我相信你给我的是json，请把它转换为javascript对象</strong></p>
+<p>所以说一旦你给它的不是json格式，那它就会报错</p>
+<p>一旦出现这种情况，我们可以从以下几个方向排查:</p>
+<ul>
+<li>后端返回了空</li>
+<li>后端返回了一段不是json格式的东西</li>
+<li>后端确实返回了json，可是在返回的途中可能因为某种原因导致这个json被破坏了</li>
+</ul>
+<p>当我们排查的时候，可以这么排查，将代码改为:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span>=&gt;<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">text</span>())
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">text</span>=&gt;<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">text</span>))
+</span></span></code></pre></div><p>这样我们就能看到返回的到底是个什么东西，知道了返回的是个啥，之后排查的时候也就有了方向</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://wei666-boop.github.io/" >
+    &copy;  tlw的博客 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -49,8 +49,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Posts">
-  <meta itemprop="datePublished" content="2026-01-13T22:57:32+08:00">
-  <meta itemprop="dateModified" content="2026-01-13T22:57:32+08:00">
+  <meta itemprop="datePublished" content="2026-01-18T21:55:20+08:00">
+  <meta itemprop="dateModified" content="2026-01-18T21:55:20+08:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Posts">
 
@@ -96,6 +96,44 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"></section>
     <section class="flex-ns mt5 flex-wrap justify-around">
+      
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/%E4%B8%80%E4%B8%AAbug/" class="link black dim">
+        一个bug
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>今天在写我的项目的时候（这个项目是一个下载bilibili视频的网站），我发现我点进下载中心的页面时，原本应该展示出的历史下载记录此时却空无一物，于是我立马点击了F12键，发现控制台报了两个错误，如下:
+<img src="/images/1.png" alt="图片显示出错"></p>
+<p>于是我就开始搜索这两个报错是什么意思</p>
+<p>整个报错最核心的一句就是:SyntaxError: Unexpected end of JSON input，这表明json还没有读完就结束了，更具体一点的话，这个报错应该发生在这里Failed to execute &lsquo;json&rsquo; on &lsquo;Response&rsquo;，这说明我们此时应该是在执行这样一段代码:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span>=&gt;<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>())
+</span></span></code></pre></div><p>此时HTTP请求返回的body并不是一个合法的json，于是就出现了上述情况。</p>
+<p>这里可能会有不了解的朋友会对这个函数产生误解，以为这个函数是将res转换为json格式，但其实不是这样的，这个函数的真实意图是:
+<strong>我相信你给我的是json，请把它转换为javascript对象</strong></p>
+<p>所以说一旦你给它的不是json格式，那它就会报错</p>
+<p>一旦出现这种情况，我们可以从以下几个方向排查:</p>
+<ul>
+<li>后端返回了空</li>
+<li>后端返回了一段不是json格式的东西</li>
+<li>后端确实返回了json，可是在返回的途中可能因为某种原因导致这个json被破坏了</li>
+</ul>
+<p>当我们排查的时候，可以这么排查，将代码改为:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span>=&gt;<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">text</span>())
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">text</span>=&gt;<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">text</span>))
+</span></span></code></pre></div><p>这样我们就能看到返回的到底是个什么东西，知道了返回的是个啥，之后排查的时候也就有了方向</p>
+    </div>
+    <a href="/posts/%E4%B8%80%E4%B8%AAbug/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
       
         <div class="w-100 w-30-l mb4 relative bg-white">
           <div class="w-100 mb4 nested-copy-line-height relative bg-white">
