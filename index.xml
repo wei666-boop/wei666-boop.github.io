@@ -3,9 +3,19 @@
         <title>tlw的博客</title>
         <link>https://wei666-boop.github.io/</link>
         <description>一个二次元风格的 Hugo 博客 ✨</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Feb 2026 14:29:02 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Feb 2026 17:15:53 &#43;0800</lastBuildDate>
             <atom:link href="https://wei666-boop.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>部署go语言项目</title>
+    <link>https://wei666-boop.github.io/posts/%E9%83%A8%E7%BD%B2go%E8%AF%AD%E8%A8%80%E9%A1%B9%E7%9B%AE/</link>
+    <pubDate>Thu, 05 Feb 2026 17:15:53 &#43;0800</pubDate><author>
+        <name>tlw</name>
+    </author><guid>https://wei666-boop.github.io/posts/%E9%83%A8%E7%BD%B2go%E8%AF%AD%E8%A8%80%E9%A1%B9%E7%9B%AE/</guid>
+    <description><![CDATA[<h1 id="如何部署go语言的项目呢" class="headerLink">
+    <a href="#%e5%a6%82%e4%bd%95%e9%83%a8%e7%bd%b2go%e8%af%ad%e8%a8%80%e7%9a%84%e9%a1%b9%e7%9b%ae%e5%91%a2" class="header-mark"></a>如何部署go语言的项目呢?</h1><p>作为一个新手,我们应该循序渐进</p>
+<p>一、先使你的项目在linux上运行起来</p>
+<p>我和很多新手一样,都是使用的windows来学习的go语言，接下来我们首先要做的事情就是让你的项目在linux上至少先跑起来</p>]]></description>
+</item><item>
     <title>对视频的思考</title>
     <link>https://wei666-boop.github.io/posts/%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E6%80%9D%E8%80%83/</link>
     <pubDate>Thu, 05 Feb 2026 14:29:02 &#43;0800</pubDate><author>
