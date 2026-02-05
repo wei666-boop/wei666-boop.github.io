@@ -1,24 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://wei666-boop.github.io/posts/</loc>
-    <lastmod>2026-01-20T14:31:33+08:00</lastmod>
-  </url><url>
-    <loc>https://wei666-boop.github.io/</loc>
-    <lastmod>2026-01-20T14:31:33+08:00</lastmod>
-  </url><url>
-    <loc>https://wei666-boop.github.io/posts/%E8%87%AA%E8%BF%B0/</loc>
-    <lastmod>2026-01-20T14:31:33+08:00</lastmod>
-  </url><url>
-    <loc>https://wei666-boop.github.io/posts/%E4%B8%80%E4%B8%AAbug/</loc>
-    <lastmod>2026-01-18T21:55:20+08:00</lastmod>
-  </url><url>
-    <loc>https://wei666-boop.github.io/posts/%E4%BD%A0%E5%A5%BDhugo/</loc>
-    <lastmod>2026-01-13T22:57:32+08:00</lastmod>
-  </url><url>
-    <loc>https://wei666-boop.github.io/categories/</loc>
-  </url><url>
-    <loc>https://wei666-boop.github.io/tags/</loc>
-  </url>
-</urlset>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    ><url>
+            <loc>https://wei666-boop.github.io/posts/</loc><lastmod>2026-02-05T14:29:02&#43;08:00</lastmod></url><url>
+            <loc>https://wei666-boop.github.io/</loc><lastmod>2026-02-05T14:29:02&#43;08:00</lastmod></url><url>
+            <loc>https://wei666-boop.github.io/posts/%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E6%80%9D%E8%80%83/</loc><lastmod>2026-02-05T14:29:02&#43;08:00</lastmod></url><url>
+            <loc>https://wei666-boop.github.io/posts/%E8%87%AA%E8%BF%B0/</loc><lastmod>2026-01-20T14:31:33&#43;08:00</lastmod></url><url>
+            <loc>https://wei666-boop.github.io/posts/%E4%B8%80%E4%B8%AAbug/</loc><lastmod>2026-01-18T21:55:20&#43;08:00</lastmod></url><url>
+            <loc>https://wei666-boop.github.io/posts/%E4%BD%A0%E5%A5%BDhugo/</loc><lastmod>2026-01-13T22:57:32&#43;08:00</lastmod></url><url>
+            <loc>https://wei666-boop.github.io/categories/</loc></url><url>
+            <loc>https://wei666-boop.github.io/tags/</loc></url></urlset>
