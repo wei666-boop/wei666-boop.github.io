@@ -3,7 +3,16 @@
         <title>所有文章 - tlw的博客</title>
         <link>https://wei666-boop.github.io/posts/</link>
         <description>所有文章 | tlw的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Feb 2026 17:15:53 &#43;0800</lastBuildDate><atom:link href="https://wei666-boop.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Feb 2026 21:48:47 &#43;0800</lastBuildDate><atom:link href="https://wei666-boop.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>又迷茫上了</title>
+    <link>https://wei666-boop.github.io/posts/%E5%8F%88%E8%BF%B7%E8%8C%AB%E4%B8%8A%E4%BA%86/</link>
+    <pubDate>Thu, 05 Feb 2026 21:48:47 &#43;0800</pubDate><author>
+        <name>tlw</name>
+    </author><guid>https://wei666-boop.github.io/posts/%E5%8F%88%E8%BF%B7%E8%8C%AB%E4%B8%8A%E4%BA%86/</guid>
+    <description><![CDATA[<h1 id="我为什么会感到这样呢" class="headerLink">
+    <a href="#%e6%88%91%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bc%9a%e6%84%9f%e5%88%b0%e8%bf%99%e6%a0%b7%e5%91%a2" class="header-mark"></a>我为什么会感到这样呢?</h1><p>我上了大学后,怀揣着对程序员的向往(什么,你问我为什么向往,因为我小时候觉得能够每天看电脑非常幸福),我选择了&mdash;通信工程。为什么不选计算机呢?废话,还不是因为分不够吗。但是,虽然这样,但是我听说有很多学通信的都去转码了。所以说,我也给自己下了这个打算。</p>
+<p>开学后,我接触了第一门编程语言&mdash;c语言,这也是许多学校教的第一门课,嗯,学校教得是很浅的,在那年寒假,我又接触了c++,学习了面向对象的编程方式。第二个学期,我学习了数据结构,同时,我迫不及待的想要了解程序员们是如何做项目的,于是,在那个学期,我学习了linux,git了解到了github这个&quot;全球同性交友平台&quot;,甚至我还学习了docker,除了这些,我还零零散散的学习了有关计算机的各种比较碎的知识(这些知识中有计网,操作系统,数据库,前端三件套等知识),终于,在大一结束的那个暑假,我确定我想要当一名go语言程序员,这在我的编程学习过程中是里程碑式的,因为我终于确定了一个方向,在大二上学期,我学习go语言的种种,并且开始尝试做一些小的项目。</p>]]></description>
+</item><item>
     <title>部署go语言项目</title>
     <link>https://wei666-boop.github.io/posts/%E9%83%A8%E7%BD%B2go%E8%AF%AD%E8%A8%80%E9%A1%B9%E7%9B%AE/</link>
     <pubDate>Thu, 05 Feb 2026 17:15:53 &#43;0800</pubDate><author>
@@ -21,15 +30,6 @@
     </author><guid>https://wei666-boop.github.io/posts/%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E6%80%9D%E8%80%83/</guid>
     <description><![CDATA[<p>B站up主软件工艺师有一个合集的视频来讲了一个分布式系统的简单实现,我学习了这个视频,然后做了一些总结</p>
 <p><a href="https://www.bilibili.com/video/BV1ZU4y1577q?t=0.5" target="_blank" rel="noopener noreferrer">视频地址</a></p>]]></description>
-</item><item>
-    <title>自述</title>
-    <link>https://wei666-boop.github.io/posts/%E8%87%AA%E8%BF%B0/</link>
-    <pubDate>Tue, 20 Jan 2026 14:31:33 &#43;0800</pubDate><author>
-        <name>tlw</name>
-    </author><guid>https://wei666-boop.github.io/posts/%E8%87%AA%E8%BF%B0/</guid>
-    <description><![CDATA[<p>为什么我那么普通呢？
-这是我常常自问的话。</p>
-<p>大家都说上帝给你关了一扇门的同时会给你打开一扇窗，但是，我活了二十年，我并没有找到那扇窗，倒是被关闭的门越找越多。我没有出众的长相，没有傲人的身材，没有聪慧的大脑，没有高超的情商，也没有什么过人的特长，我找不到比我还废物的人，我啥也不是。就tm连吃饭都吃不过别人。</p>]]></description>
 </item><item>
     <title>一个bug</title>
     <link>https://wei666-boop.github.io/posts/%E4%B8%80%E4%B8%AAbug/</link>
