@@ -3,9 +3,41 @@
         <title>tlw的博客</title>
         <link>https://wei666-boop.github.io/</link>
         <description>一个二次元风格的 Hugo 博客 ✨</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Feb 2026 21:48:47 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 13 Feb 2026 02:10:19 &#43;0800</lastBuildDate>
             <atom:link href="https://wei666-boop.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>记一次nanobot部署</title>
+    <link>https://wei666-boop.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1nanobot%E9%83%A8%E7%BD%B2/</link>
+    <pubDate>Fri, 13 Feb 2026 02:10:19 &#43;0800</pubDate><author>
+        <name>tlw</name>
+    </author><guid>https://wei666-boop.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1nanobot%E9%83%A8%E7%BD%B2/</guid>
+    <description><![CDATA[<h2 id="前情提要最近香港大学开源了一个类似于openclaw的超级简化版本看到很多人都在部署openclaw于是我就决定部署nanobot主要是部署这个简单啊" class="headerLink">
+    <a href="#%e5%89%8d%e6%83%85%e6%8f%90%e8%a6%81%e6%9c%80%e8%bf%91%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%a6%e5%bc%80%e6%ba%90%e4%ba%86%e4%b8%80%e4%b8%aa%e7%b1%bb%e4%bc%bc%e4%ba%8eopenclaw%e7%9a%84%e8%b6%85%e7%ba%a7%e7%ae%80%e5%8c%96%e7%89%88%e6%9c%ac%e7%9c%8b%e5%88%b0%e5%be%88%e5%a4%9a%e4%ba%ba%e9%83%bd%e5%9c%a8%e9%83%a8%e7%bd%b2openclaw%e4%ba%8e%e6%98%af%e6%88%91%e5%b0%b1%e5%86%b3%e5%ae%9a%e9%83%a8%e7%bd%b2nanobot%e4%b8%bb%e8%a6%81%e6%98%af%e9%83%a8%e7%bd%b2%e8%bf%99%e4%b8%aa%e7%ae%80%e5%8d%95%e5%95%8a" class="header-mark"></a>前情提要:最近香港大学开源了一个类似于openclaw的超级简化版本,看到很多人都在部署openclaw,于是我就决定部署nanobot,主要是部署这个简单啊</h2><h2 id="项目地址nanobot" class="headerLink">
+    <a href="#%e9%a1%b9%e7%9b%ae%e5%9c%b0%e5%9d%80nanobot" class="header-mark"></a>项目地址:<a href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener noreferrer">nanobot</a></h2><h2 id="要求node版本18-python环境" class="headerLink">
+    <a href="#%e8%a6%81%e6%b1%82node%e7%89%88%e6%9c%ac18-python%e7%8e%af%e5%a2%83" class="header-mark"></a>要求:node版本&gt;=18 python环境</h2><h2 id="开始部署" class="headerLink">
+    <a href="#%e5%bc%80%e5%a7%8b%e9%83%a8%e7%bd%b2" class="header-mark"></a>开始部署</h2><h3 id="下载项目" class="headerLink">
+    <a href="#%e4%b8%8b%e8%bd%bd%e9%a1%b9%e7%9b%ae" class="header-mark"></a>下载项目</h3><p>我直接使用的pip安装</p>
+<div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
+  <div class="
+    
+    tw-flex 
+    tw-flex-row
+    tw-flex-1 
+    tw-justify-between 
+    tw-w-full tw-bg-bgColor-secondary
+    ">      
+    <button 
+      class="
+        code-block-button
+        tw-mx-2 
+        tw-flex
+        tw-flex-row
+        tw-flex-1"
+      aria-hidden="true">
+          <div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div>
+          <p class="tw-select-none !tw-my-1">shell</p>]]></description>
+</item><item>
     <title>又迷茫上了</title>
     <link>https://wei666-boop.github.io/posts/%E5%8F%88%E8%BF%B7%E8%8C%AB%E4%B8%8A%E4%BA%86/</link>
     <pubDate>Thu, 05 Feb 2026 21:48:47 &#43;0800</pubDate><author>
